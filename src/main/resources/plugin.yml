@@ -1,0 +1,18 @@
+main: io.github.deerjump.menuplayground.MenuPlayground
+name: MenuPlayground
+version: 1.0
+author: Deerjump
+api-version: 1.16
+
+commands:
+  menu:
+    aliases:
+      - info
+  worldcreate:
+    aliases:
+      - wc
+  worldsmenu:
+    aliases:
+      - wm
+
+
