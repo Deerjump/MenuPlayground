@@ -20,9 +20,11 @@ public class MenuPlayground extends JavaPlugin implements Listener {
    @Override public void onEnable() {
       Bukkit.getPluginManager().registerEvents(this, this);
       registerCommands();
+      Bukkit.getServer().getPluginCommand("kit");
    }
 
-   @SuppressWarnings("all")
+
+   @SuppressWarnings("ConstantConditions")
    private void registerCommands() {
       this.getCommand("menu").setExecutor(new MenuCommand());
       this.getCommand("worldcreate").setExecutor(new CreateWorldCommand());
