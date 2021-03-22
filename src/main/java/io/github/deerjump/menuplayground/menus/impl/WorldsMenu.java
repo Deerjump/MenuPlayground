@@ -2,7 +2,7 @@ package io.github.deerjump.menuplayground.menus.impl;
 
 import io.github.deerjump.builders.ItemBuilder;
 import io.github.deerjump.builders.SkullBuilder;
-import io.github.deerjump.menuplayground.menus.BaseMenu;
+import io.github.deerjump.menuapi.Menu;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -12,10 +12,11 @@ import static io.github.deerjump.menuplayground.menus.MenuHeads.BACK_ARROW;
 import static io.github.deerjump.menuplayground.menus.MenuHeads.END_GLOBE;
 import static io.github.deerjump.menuplayground.menus.MenuHeads.GLOBE;
 import static io.github.deerjump.menuplayground.menus.MenuHeads.NETHER_GLOBE;
-import static org.bukkit.ChatColor.*;
+import static org.bukkit.ChatColor.BLUE;
+import static org.bukkit.ChatColor.WHITE;
 import static org.bukkit.Material.GRAY_STAINED_GLASS_PANE;
 
-public class WorldsMenu extends BaseMenu {
+public class WorldsMenu extends Menu {
     private static final String MENU_TITLE = "Worlds Menu";
 
     public WorldsMenu() {
@@ -26,6 +27,7 @@ public class WorldsMenu extends BaseMenu {
     @SuppressWarnings({"SwitchStatementWithTooFewBranches", "ConstantConditions"})
     public boolean onClick(Player player, int slot, ClickType type) {
         if (slot >= inventory.getSize() || slot < 0) return false;
+
         switch (slot) {
             case 45: { player.openInventory(new ServerMenu().getInventory()); break;}
             default: {

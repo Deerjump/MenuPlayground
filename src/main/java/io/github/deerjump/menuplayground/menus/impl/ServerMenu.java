@@ -2,14 +2,15 @@ package io.github.deerjump.menuplayground.menus.impl;
 
 import io.github.deerjump.builders.ItemBuilder;
 import io.github.deerjump.builders.SkullBuilder;
-import io.github.deerjump.menuplayground.menus.BaseMenu;
+import io.github.deerjump.menuapi.Menu;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
+
 import static io.github.deerjump.menuplayground.menus.MenuHeads.BACK_ARROW;
 import static org.bukkit.ChatColor.*;
 import static org.bukkit.Material.GRAY_STAINED_GLASS_PANE;
 
-public class ServerMenu extends BaseMenu {
+public class ServerMenu extends Menu {
     private static final String MENU_TITLE = "Server Stats";
 
     public ServerMenu() {

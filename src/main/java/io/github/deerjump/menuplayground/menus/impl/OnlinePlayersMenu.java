@@ -2,27 +2,29 @@ package io.github.deerjump.menuplayground.menus.impl;
 
 import io.github.deerjump.builders.ItemBuilder;
 import io.github.deerjump.builders.SkullBuilder;
-import io.github.deerjump.menuplayground.menus.BaseMenu;
+import io.github.deerjump.menuapi.Menu;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
+
 import static io.github.deerjump.menuplayground.menus.MenuHeads.BACK_ARROW;
 import static org.bukkit.ChatColor.*;
 import static org.bukkit.Material.*;
 
-public class OnlinePlayersMenu extends BaseMenu {
-    private static final String MENU_TITLE = String.format("%s/%s", Bukkit.getOnlinePlayers().size(),Bukkit.getMaxPlayers());
+public class OnlinePlayersMenu extends Menu {
+    private static final String MENU_TITLE = String.format("%s/%s", Bukkit.getOnlinePlayers().size(), Bukkit.getMaxPlayers());
 
     public OnlinePlayersMenu() {
         super(54, MENU_TITLE);
     }
 
     @Override
-    @SuppressWarnings({"SwitchStatementWithoutDefaultBranch", "SwitchStatementWithTooFewBranches"})
+    @SuppressWarnings("SwitchStatementWithTooFewBranches")
     public boolean onClick(Player player, int slot, ClickType type) {
         switch (slot) {
             case 45: { player.openInventory(new ServerMenu().getInventory()); }
         }
+
         return true;
     }
 

@@ -1,12 +1,13 @@
-package io.github.deerjump.menuplayground.menus;
+package io.github.deerjump.menuplayground.menus.impl;
 
+import io.github.deerjump.menuapi.Menu;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 
 import static org.bukkit.Material.*;
 
-public class TestMenu extends BaseMenu {
+public class TestMenu extends Menu {
 
     public TestMenu() {
         super("Example");
@@ -24,6 +25,7 @@ public class TestMenu extends BaseMenu {
             case 2: { player.sendMessage(type + " clicked on the grass"); break; }
             default: { player.sendMessage(type + " clicked on an empty slot"); break; }
         }
+
         player.sendMessage("You clicked on the " + this.getInventory().getItem(slot).getType() + ". It was in slot: " + slot);
         return true;
     }

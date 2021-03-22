@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MenuPlayground" />
+        <module name="menu-playground" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MenuPlayground" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
